@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    
+    printf("Please enter a whole number:\n");
+    scanf("%d", &n);
+    
+    (n % 2 == 0) ? (printf("%d is even.", n)) : (printf("%d is odd.", n));
+    
+}
