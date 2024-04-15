@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main (void)
+{
+    int start, stop, step, iterations = 0;
+    
+    
+    printf("Starting number:\n");
+    scanf("%d", &start);
+    printf("Stopping number:\n");
+    scanf("%d", &stop);
+    printf("Step size:\n");
+    scanf("%d", &step);
+    printf("Using a for loop:\n\n");
+    
+    
+    
+    printf("Starting at %d...\n\n", start);
+    for (int i = start; i <= stop; i += step) {
+        printf("In loop: %d...\n", i);
+        iterations++;
+    }
+    printf("\nStopping at %d...\n\n", stop);
+    printf("This loop did %d iterations.\n", iterations);
+
+    return 0;
+}
