@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int arr[500];
+    int numOfElements;
+
+    printf("Enter the required number of elements (Max 500):\n\n");
+    scanf("%d", &numOfElements);
+
+    if (numOfElements > 500 || numOfElements <= 0) {
+        printf("Invalid input. Number of elements must be between 1 and 500.\n");
+        return 1; // Exit the program with an error code
+    }
+
+    printf("Now enter the %d elements of the array...\n\n", numOfElements);
+
+    for (int i = 0; i < numOfElements; ++i) {
+        printf("Set [%d] to: \n", i);
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nThe elements in the array are: \n\n{ ");
+    for (int i = 0; i < numOfElements; ++i) {
+        printf("%d", arr[i]);
+        if (i < numOfElements - 1) {
+            printf(", ");
+        }
+    }
+    printf(" }\n");
+
+    return 0;
+}
