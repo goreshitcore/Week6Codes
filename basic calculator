@@ -1,0 +1,57 @@
+#include <stdio.h>
+int main (void)
+{
+    char operator;
+    int left_operand, right_operand;
+    int result;
+
+    printf("Operator? ");
+    scanf("%c", &operator);
+    printf("Left Operand?");
+    scanf("%d", &left_operand);
+    printf(" Right Operand?\n");
+    scanf("%d", &right_operand);
+    
+  
+    switch (operator) {
+    case '+':
+            result = left_operand + right_operand;
+             printf("Computing: %d %c %d\n", left_operand, operator, right_operand);
+            printf("Result: %d\n", (int)result);
+            break;
+        case '-':
+            result = left_operand - right_operand;
+             printf("Computing: %d %c %d\n", left_operand, operator, right_operand);
+    
+            printf("Result: %d\n", (int)result);
+            break;
+        case '*':
+            result = left_operand * right_operand;
+             printf("Computing: %d %c %d\n", left_operand, operator, right_operand);
+    
+            printf("Result: %d\n", (int)result);
+            break;
+        case '/':
+            if (right_operand == 0) {
+                printf("Unable to compute divide by zero!\n");
+            } else {
+                result = (int)left_operand / right_operand;
+                 printf("Computing: %d %c %d\n", left_operand, operator, right_operand);
+    
+                printf("Result: %d\n", result);
+            }
+            break;
+        case '%':
+            if (right_operand == 0) {
+                printf("Unable to compute divide by zero!\n");
+            } else {
+                result = left_operand % right_operand;
+                printf("Result: %d\n", (int)result);
+            }
+            break;
+        default:
+            printf("Invalid operator!\n");
+    }
+
+    return 0;
+}
