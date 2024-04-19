@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main(){
+    
+    int num[5];
+    char choice; 
+    int result;
+
+    
+	printf("Input five whole numbers:\n");
+
+	printf("--------------------------\n\n");
+	
+    for (int i = 0; i <= 4; i++) {
+        printf("Enter number %d:\n", i + 1);
+            scanf("%d", &num[i]);\
+    }
+
+    printf("\nThe five numbers are: { %d, %d, %d, %d, %d }\n\n", num[0], num[1], num[2], num[3], num[4]);
+    
+    printf("Would you like to sum or multiply the elements (s/m)?\n");
+    scanf(" %c", &choice);
+    
+    if ( choice == 's' || choice == 'S') {
+        result = num[0] + num[1] + num[2] + num[3] + num[4];
+        printf("The sum of  %d + %d + %d + %d + %d is %d\n", num[0], num[1], num[2], num[3], num[4], result);
+    }
+    
+    else if (choice == 'm' || choice == 'M') {
+        result = num[0] * num[1] * num[2] * num[3] * num[4];
+        printf("The multiplication of  %d * %d * %d * %d * %d is %d\n", num[0], num[1], num[2], num[3], num[4], result);
+    } else {
+        printf("Invalid choice!\n");
+    }
+	return 0;
+}
+
+
