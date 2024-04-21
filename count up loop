@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    for (int count = 40; count <= 400; count += 10) {
+        printf("%d\n", count);
+    }
+    return 0;
+}
