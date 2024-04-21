@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(void) {
+    int sum = 0;
+    int count = 0;
+    int number;
+
+    while (1) {
+        printf("Number (-1 to stop)?\n");
+        scanf("%d", &number);
+        
+        if (number == -1) {
+            if (count == 0) {
+                printf("No numbers input.\n");
+                return 0; 
+            } else {
+                break; 
+            }
+        }
+        
+        if (number >= 0) {
+            sum += number;
+            count++;
+        }
+    }
+
+    int average = (double) sum / count;
+
+    if (count == 1) {
+        printf("\nThe average of the 1 number input is %.d\n", average);
+    } else {
+        printf("\nThe average of the %d numbers input is %d\n", count, average);
+    }
+
+    return 0;
+}
