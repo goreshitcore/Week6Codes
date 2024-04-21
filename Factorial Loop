@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main (void) {
+    int number, factorial = 1;
+    
+    printf("Enter a non-negative whole number:\n");
+    scanf("%d", &number);
+    scanf("%d", &factorial);
+    
+    if (number < 0) {
+        printf("Bad Input! %d is negative...", number);
+    }
+    
+    else if (number == 0) {
+        printf("0! is 1");
+    }
+    else {
+        for ( int i = number; i >= 1; i-- ) {
+            factorial *= i;
+        }
+        printf("%d! is %d", number, factorial);
+
+    }
+
+
+    return 0;
+}
