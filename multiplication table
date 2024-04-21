@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(void)
+{
+    int wholenum;
+    int count;
+    
+    printf("Enter a whole number:\n");
+    scanf("%d", &wholenum);
+    
+    printf("The %d Times Table:\n", wholenum);
+    printf("------------------\n\n");
+
+    for (count = 0; count <= 14; count++)
+{
+    printf("%d x %d = %d\n", count, wholenum, (wholenum*count));
+    
+}
+    
+}
